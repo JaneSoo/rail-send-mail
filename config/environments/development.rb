@@ -62,8 +62,8 @@ Rails.application.configure do
     domain: "example.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "YourEmail",
-    password: "YourPassword"
+    user_name: "EMAIL",
+    password: "PASSWORD"
   }
 
   # change to true to allow email to be sent during development
