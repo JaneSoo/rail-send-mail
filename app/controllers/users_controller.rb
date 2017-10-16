@@ -9,20 +9,17 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user_params])
-   
-      respond_to do |format|
-         if @user.save
-            # Tell the UserMailer to send a welcome email after save
-            ExampleMailer.sample_email(@user).deliver_later
-            
-            format.html { render action: 'index' , notice: 'User was successfully created.' }
-         else
-            format.html { render action: 'new' }
-         end
-         
-      end
-      
+    @user = User.new(user_params)
+    if @user.save
+      ExampleMailer.signup_confirmation(@user).deliver
+      redirect_to @user, notice: "Sent successfully!"
+    else
+      render :new
+    end
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   private

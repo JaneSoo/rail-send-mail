@@ -1,6 +1,2 @@
-api_key: 'key-be9e0ec47f204dde30fd62ac34a106c7'
-domain: 'Domain'
-username: 'jane.soo47@gmail.com'
-password: 'loveshinobi'
-gmail_username: 'jane.soo47@gmail.com'
-gmail_password: 'crushhim'
+GMAIL_USERNAME: 'YourEmail'
+GMAIL_PASSWORD: 'YourPassword'
